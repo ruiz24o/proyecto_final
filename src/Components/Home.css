@@ -1,0 +1,206 @@
+/* Contenedor principal */
+.page-container {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Secciones temáticas */
+.themed-section {
+  margin-bottom: 40px;
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.text-primary-dark {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Estilos para las tablas */
+.table-themed {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Encabezados de tabla */
+.table-themed thead {
+  background: #34495e;
+  color: white;
+}
+
+.table-themed th {
+  padding: 15px 12px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #2c3e50;
+}
+
+/* Celdas de datos */
+.table-themed td {
+  padding: 12px;
+  border-bottom: 1px solid #e9ecef;
+  vertical-align: middle;
+  font-size: 14px;
+}
+
+/* Filas alternadas */
+.table-striped tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.table-striped tbody tr:hover {
+  background-color: #e3f2fd;
+  transition: background-color 0.2s ease;
+}
+
+/* Alineación específica por columna */
+.table-themed th:first-child,
+.table-themed td:first-child {
+  /* Posición - centrado */
+  text-align: center;
+  width: 80px;
+}
+
+.table-themed th:nth-child(2),
+.table-themed td:nth-child(2) {
+  /* Título - izquierda */
+  text-align: left;
+  min-width: 200px;
+  font-weight: 500;
+}
+
+.table-themed th:nth-child(3),
+.table-themed td:nth-child(3) {
+  /* Calificación - centrado */
+  text-align: center;
+  width: 100px;
+  font-weight: 600;
+  color: #e74c3c;
+}
+
+.table-themed th:nth-child(4),
+.table-themed td:nth-child(4) {
+  /* Clasificación - centrado */
+  text-align: center;
+  width: 100px;
+}
+
+.table-themed th:nth-child(5),
+.table-themed td:nth-child(5) {
+  /* Géneros - izquierda */
+  text-align: left;
+  min-width: 150px;
+}
+
+.table-themed th:nth-child(6),
+.table-themed td:nth-child(6) {
+  /* Año - centrado */
+  text-align: center;
+  width: 80px;
+}
+
+.table-themed th:nth-child(7),
+.table-themed td:nth-child(7) {
+  /* Duración - centrado */
+  text-align: center;
+  width: 100px;
+}
+
+/* Estilos para tablas de top 10 (sin columna posición) */
+.themed-section:nth-child(3) .table-themed th:first-child,
+.themed-section:nth-child(3) .table-themed td:first-child,
+.themed-section:nth-child(4) .table-themed th:first-child,
+.themed-section:nth-child(4) .table-themed td:first-child {
+  /* Título en tablas de top 10 */
+  text-align: left;
+  min-width: 250px;
+  width: auto;
+}
+
+.themed-section:nth-child(3) .table-themed th:nth-child(2),
+.themed-section:nth-child(3) .table-themed td:nth-child(2),
+.themed-section:nth-child(4) .table-themed th:nth-child(2),
+.themed-section:nth-child(4) .table-themed td:nth-child(2) {
+  /* Calificación en tablas de top 10 */
+  text-align: center;
+  width: 100px;
+  font-weight: 600;
+  color: #e74c3c;
+}
+
+.themed-section:nth-child(3) .table-themed th:nth-child(3),
+.themed-section:nth-child(3) .table-themed td:nth-child(3),
+.themed-section:nth-child(4) .table-themed th:nth-child(3),
+.themed-section:nth-child(4) .table-themed td:nth-child(3) {
+  /* Clasificación en tablas de top 10 */
+  text-align: center;
+  width: 100px;
+}
+
+.themed-section:nth-child(3) .table-themed th:nth-child(4),
+.themed-section:nth-child(3) .table-themed td:nth-child(4),
+.themed-section:nth-child(4) .table-themed th:nth-child(4),
+.themed-section:nth-child(4) .table-themed td:nth-child(4) {
+  /* Géneros en tablas de top 10 */
+  text-align: left;
+  min-width: 150px;
+}
+
+.themed-section:nth-child(3) .table-themed th:nth-child(5),
+.themed-section:nth-child(3) .table-themed td:nth-child(5),
+.themed-section:nth-child(4) .table-themed th:nth-child(5),
+.themed-section:nth-child(4) .table-themed td:nth-child(5) {
+  /* Año en tablas de top 10 */
+  text-align: center;
+  width: 80px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .page-container {
+    padding: 10px;
+  }
+  
+  .themed-section {
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .table-themed {
+    font-size: 12px;
+  }
+  
+  .table-themed th,
+  .table-themed td {
+    padding: 8px 6px;
+  }
+  
+  .text-primary-dark {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .table-themed {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  .table-themed th,
+  .table-themed td {
+    min-width: 100px;
+  }
+}
